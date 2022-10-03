@@ -1,7 +1,7 @@
 import "./App.css";
 import { Redirect, Route, Switch } from "react-router-dom";
-import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 import Home from "./components/Home/Home";
 import Header from "./components/layout/Header";
 import ProductDetails from "./components/Products/ProductDetails";
@@ -34,7 +34,7 @@ const App = () => {
     });
   }, []);
   return (
-    <div>
+    <>
       <Header />
       <main>
         <Switch>
@@ -72,7 +72,7 @@ const App = () => {
           </Route>
         </Switch>
       </main>
-    </div>
+    </>
   );
 };
 
